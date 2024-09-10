@@ -4,6 +4,7 @@
 
 /* font */
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
 
 
 body {
@@ -11,9 +12,16 @@ body {
   background-color: rgb(21 23 25) !important;
 }
 
+.daughter-font {
+  font-family: "Architects Daughter", cursive;
+}
 
 .primary-color {
   background-color: rgb(93 93 255);
+}
+
+.primary-text {
+  color: rgb(93 93 255);
 }
 
 
@@ -27,6 +35,12 @@ h1 {
 h2 {
   font-size: 2.5rem !important;
   font-weight: 800 !important;
+  color: rgb(231, 231, 231);
+}
+
+h3 {
+  font-size: 2rem !important;
+  font-weight: 700 !important;
   color: rgb(231, 231, 231);
 }
 
@@ -56,6 +70,26 @@ h4 {
 /* ======== banner  =========*/
 
 
+
+
+/* ======== About  =========*/
+
+.svg-icon {
+  color: rgb(93 93 255);
+  height: 3em;
+  width: 3em;
+  /* border-radius: 5px; */
+}
+
+/* ======== Contact ======== */
+input {
+  background-color: rgb(75 74 207);
+  border: 1px solid rgb(141 141 255);
+}
+
+.contact a{
+  background-color: rgb(244 244 255);
+}
 
 
 
