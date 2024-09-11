@@ -4,41 +4,104 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Crypto</title>
+    <!-- css -->
     <link rel="stylesheet" href="style.css" />
+    <!-- tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- aos animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
 
   <body>
     <header class="fixed top-0 w-full z-30 bg-black bg-opacity-10">
-
       <nav class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="flex items-center justify-between h-20">
-
+          <!-- Logo -->
           <div class="shrink-0 mr-4">
-            <img width="300" height="100" class="h-full w-28" src="assets/images/UAV Sync White.webp" alt="">
+            <img
+              width="300"
+              height="100"
+              class="h-full w-28"
+              src="assets/images/UAV Sync White.webp"
+              alt=""
+            />
           </div>
 
-          <div class="text-white flex gap-6 font-bold">
-            <a class="hover:text-indigo-500" href=""> Home </a>
-            <a href=""> About </a>
-            <a href=""> Portfolio </a>
-            <a href=""> Contact </a>
+          <!-- Menu items (hidden on small screens) -->
+          <div class="hidden lg:flex text-white gap-6 font-bold">
+            <a class="hover:text-indigo-500" href="#"> Home </a>
+            <a class="hover:text-indigo-500" href="#about"> About </a>
+            <a class="hover:text-indigo-500" href="#portfolio"> Portfolio </a>
+            <a class="hover:text-indigo-500" href="#contact"> Contact </a>
           </div>
 
-
-          <div class="flex center gap-4">
-            <a href="" class="primary-text"> Sign in </a>
-            <a href="" class="primary-color text-white p-3">  Sign Up </a>
+          <!-- Sign in/Sign up (hidden on small screens) -->
+          <div class="hidden lg:flex center gap-4">
+            <a href="#" class="primary-text">Sign in</a>
+            <a href="#" class="primary-color text-white p-3">Sign Up</a>
           </div>
 
+          <!-- Hamburger Menu (visible on small screens) -->
+          <div class="lg:hidden">
+            <button id="menu-toggle" class="text-white focus:outline-none">
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Menu (hidden by default) -->
+        <div
+          id="mobile-menu"
+          class="lg:hidden hidden flex-col mt-4 bg-gray-700"
+        >
+          <a class="block text-white hover:text-indigo-500 py-2" href="#">
+            Home
+          </a>
+          <a class="block text-white hover:text-indigo-500 py-2" href="#about">
+            About
+          </a>
+          <a
+            class="block text-white hover:text-indigo-500 py-2"
+            href="#portfolio"
+          >
+            Portfolio
+          </a>
+          <a
+            class="block text-white hover:text-indigo-500 py-2"
+            href="#contact"
+          >
+            Contact
+          </a>
+          <a class="block text-white hover:text-indigo-500 py-2" href="#">
+            Sign in
+          </a>
+          <a class="block text-white bg-indigo-500 py-2" href="#"> Sign Up </a>
         </div>
       </nav>
-      
     </header>
 
     <main class="max-w-6xl mx-auto px-4 sm:px-6">
       <!--======== banner ========  -->
-      <section class="banner center flex-col border-b-2 border-gray-800 relative pt-32 pb-10 md:pt-40 md:pb-16">
+      <section
+        class="banner center flex-col border-b-2 border-gray-800 relative pt-32 pb-10 md:pt-40 md:pb-16"
+        data-aos="fade-up"
+        data-aos-duration="2000"
+        
+        
+      >
         <h1 class="mb-4 text-center">
           Secure Peer-to-Peer UAV <br />
           Communication
@@ -53,7 +116,7 @@
         >
           <div>
             <a
-              class="btn text-white primary-color w-full mb-4 px-5 py-4 max-sm:px-20"
+              class="btn text-white primary-color hover:bg-indigo-800 w-full mb-4 px-5 py-4 max-sm:px-20 cursor-pointer"
             >
               Start Free Trial
             </a>
@@ -61,7 +124,7 @@
 
           <div>
             <a
-              class="btn text-white bg-gray-700 hover:bg-gray-800 w-full sm:w-auto sm:ml-4 px-5 py-4 max-sm:px-20"
+              class="btn text-white bg-gray-700 hover:bg-gray-800 w-full sm:w-auto sm:ml-4 px-5 py-4 max-sm:px-20 cursor-pointer"
             >
               Learn More
             </a>
@@ -75,15 +138,24 @@
             src="assets/images/hero-image-01.webp"
             alt=""
           />
-          <button class="text-white absolute">play</button>
+          <button class="absolute bg-slate-200 rounded-full p-7 hover:opacity-75">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5 primary-text">
+            <path fill-rule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd" />
+          </svg>
+          </button>
         </div>
       </section>
 
       <!--======== About =========-->
 
-      <section class="about py-12 md:py-12 border-b-2 border-gray-800">
+      <section
+        class="about py-12 md:py-12 border-b-2 border-gray-800"
+        id="about"   
+        data-aos="fade-up"
+        data-aos-duration="2000"
+      >
         <div class="center flex-col pb-12 md:pb-20">
-          <h2 class="mb-4">Secure Peer-to-Peer UAV Communication.</h2>
+          <h2 class="mb-4 text-center">Secure Peer-to-Peer UAV Communication.</h2>
           <p class="text-xl text-gray-400">
             Next-gen, encrypted communication for UAV fleets and ground control
             systems.
@@ -185,8 +257,11 @@
 
       <!-- =========  portfolio ========== -->
 
-      <section class="pt-12 md:pt-20 border-b-2 border-gray-800">
-        <div class="text-center pb-12 md:pb-16">
+      <section class="pt-12 md:pt-20 border-b-2 border-gray-800" id="portfolio">
+        <div class="text-center pb-12 md:pb-16"
+        data-aos="fade-up"
+        data-aos-duration="2000"
+        >
           <div
             class="inline-flex text-sm font-semibold py-1 px-3 m-2 text-green-600 bg-green-200 rounded-full mb-4"
           >
@@ -202,7 +277,10 @@
 
         <!-- portfolio one -->
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center pb-20">
-          <div class="col-span-1 lg:col-span-1 md:col-span-1">
+          <div class="col-span-1 lg:col-span-1 md:col-span-1" 
+          data-aos="fade-right"
+          data-aos-duration="2000"
+          >
             <div class="text-xl mb-2 primary-text daughter-font">
               More speed. Less spend
             </div>
@@ -269,18 +347,29 @@
               </li>
             </ul>
           </div>
-          <div class="col-span-1 lg:col-span-1">
+          <div class="col-span-1 lg:col-span-1"
+          data-aos="fade-left"
+          data-aos-duration="2000"
+          
+          >
             <img src="assets/images/portfolio1.webp" alt="" />
           </div>
         </div>
 
         <!-- portfolio two -->
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center pb-20">
-          <div class="col-span-1 lg:col-span-1">
+          <div class="col-span-1 lg:col-span-1"
+          data-aos="fade-right"
+          data-aos-duration="2000"
+          
+          >
             <img src="assets/images/cyber-security-3400657_1280.webp" alt="" />
           </div>
 
-          <div class="col-span-1 lg:col-span-1 md:col-span-1">
+          <div class="col-span-1 lg:col-span-1 md:col-span-1" 
+          data-aos="fade-left"
+          data-aos-duration="2000"
+          >
             <div class="text-xl mb-2 primary-text daughter-font">
               More speed. Less spend
             </div>
@@ -351,7 +440,11 @@
 
         <!-- portfolio three -->
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center pb-20">
-          <div class="col-span-1 lg:col-span-1 md:col-span-1">
+          <div class="col-span-1 lg:col-span-1 md:col-span-1"  
+          data-aos="fade-right"
+          data-aos-duration="2000"
+          
+          >
             <div class="text-xl mb-2 primary-text daughter-font">
               More speed. Less spend
             </div>
@@ -418,7 +511,11 @@
             </ul>
           </div>
 
-          <div class="col-span-1 lg:col-span-1">
+          <div class="col-span-1 lg:col-span-1" 
+          data-aos="fade-left"
+          data-aos-duration="2000"
+          
+          >
             <img src="assets/images/frequency-wave-7776034_1280.webp" alt="" />
           </div>
         </div>
@@ -426,9 +523,12 @@
 
       <!--=========== Contact ============= -->
 
-      <section class="contact">
+      <section class="contact" id="contact" 
+      data-aos="fade-up"
+      data-aos-duration="2000"
+      >
         <div
-          class="grid grid-cols-2 lg:gap-20 md:gap-6 sm:gap-6 p-10 primary-color relative lg:text-start md:text-center max-sm:text-center py-10 px-8 md:py-16 md:px-12"
+          class="grid grid-cols-2 lg:gap-20 md:gap-6 sm:gap-6 p-10 primary-color relative text-center lg:text-start py-10 px-8 md:py-16 md:px-12"
         >
           <div class="lg:col-span-1 md:col-span-2 sm:col-span-2">
             <h3 class="mb-3">Stay in the loop</h3>
@@ -438,7 +538,7 @@
           </div>
 
           <div
-            class="lg:col-span-1 lg:flex-row md:flex-row max-sm:flex-col center md:col-span-2 max-sm:col-span-2"
+            class="lg:col-span-1 center lg:flex-row md:flex-row md:col-span-2 max-sm:col-span-2 sm:col-span-2"
           >
             <input
               type="email"
@@ -670,6 +770,14 @@
       </div>
     </footer>
 
+    <!-- js -->
     <script src="assets/app.js"></script>
+    <!-- aos -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+      });
+    </script>
   </body>
 </html>
